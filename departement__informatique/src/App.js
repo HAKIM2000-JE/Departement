@@ -1,14 +1,31 @@
-import logo from './logo.svg';
-import './Style/App.css';
-import Navbar from './component/Navbar';
-import Sidebar from './component/Sidebar';
-
+import './App.css';
+import React from 'react';
+import NoteDetails from "./components/noteDetails";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Home from "./components/Home";
+import Notes from "./components/Notes";
 function App() {
+
   return (
-    <div className="App">
-      <Navbar />
-      <Sidebar/>
-    </div>
+      <div>
+
+              <NavBar/>
+              <div>
+                  <Router>
+                  <Switch>
+                      <Route path="/Home" component={Home}></Route>
+                      <Route path="/TableauAffichage" component={Notes}></Route>
+                      <Route path="/NoteDetails" component={NoteDetails}></Route>
+                  </Switch>
+                  </Router>
+              </div>
+          <Footer/>
+      </div>
+
+
+
   );
 }
 

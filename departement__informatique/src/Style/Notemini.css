@@ -1,0 +1,58 @@
+.notemini {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.notemini__cadre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 400px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.notemini__titre>h1 {
+    color: #1A6E92;
+    margin-bottom: 10px;
+}
+
+.notemini__titre>span {
+    margin-left: 50px;
+    padding: 15%;
+}
+
+.notemini__contenu {
+    padding: 10px;
+}
+
+.btn__read {
+    background: #1899DA;
+    border: 1px solid;
+    margin-top: 10px;
+    color: #fff;
+    font-size: large;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.notemini__btns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.notemini__btns>button {
+    color: #1899DA;
+    background: #fff;
+    border: none;
+    font-size: medium;
+    box-shadow: 1px 1px 0px 2px rgba(0, 0, 0, 0.3);
+}

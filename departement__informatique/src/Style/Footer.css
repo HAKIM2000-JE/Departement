@@ -1,0 +1,30 @@
+.footer {
+    width: 100%;
+    display: flex;
+    background-color: #353535;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.footer__left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__right {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__logo>img {
+    height: 100px;
+    object-fit: contain;
+    flex: 1;
+}
+
+.footer__phone,
+.footer__mail,
+.footer__website {
+    display: flex;
+    align-items: center;
+}
