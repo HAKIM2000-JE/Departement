@@ -1,0 +1,68 @@
+  * {
+    box-sizing: border-box;
+  }
+  
+  label {
+    /* padding: 12px 12px 12px 0; */
+    display: inline-block;
+  }
+  
+  .submit{
+    background-color: rgba(22, 155, 213, 1);
+    color: rgb(0, 0, 0);
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 3px;
+  }
+  
+  .submit:hover {
+    background-color: #ebebeb;
+  }
+  
+  .col-10 {
+    float: right;
+    margin-top: 6px;
+    margin-right: 20px;
+  }
+  
+  
+  .col-100 {
+    margin-left: 25%;
+    border-style: solid;
+    overflow: hidden;
+    width: 50%;
+    margin-top: 6px;
+  }
+  
+  .react-pdf__Page__canvas {
+    margin: 0 auto;
+    width: 80% !important;
+    height: 100% !important;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    align-content: center;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-10, .col-100, .submit {
+      width: 100%;
+      margin-top: 0;
+    }
+  
+  }
+  
+  
+  
+  .emploiTemps{
+    width:50%;
+    height: auto;
+  }
