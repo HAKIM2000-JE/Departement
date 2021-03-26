@@ -1,9 +1,12 @@
 .footer {
     width: 100%;
+    
     display: flex;
     background-color: #353535;
     justify-content: space-around;
     color: #fff;
+    
+  
 }
 
 .footer__left {

@@ -25,11 +25,9 @@ function NoteDetails() {
     return (
 
             <Container>
-                {
-                    data.map((note) => (
                         <div>
                             <Typography color="textPrimary" gutterBottom variant="h5" align="center" style={{ marginTop: "30px"}}>
-                                {note.title}
+                                Rattrapage de compilation
                             </Typography>
                             <div style={{
                                 borderRadius: '15px',
@@ -52,10 +50,10 @@ function NoteDetails() {
                                             </ListItemAvatar>
                                             <ListItemText>
                                                 <Typography color="textPrimary" variant="subtitle1">
-                                                    {note.author.firstname} {note.author.lastname}
+                                                    Fatima Zahra BELOUADHA
                                                 </Typography>
                                                 <Typography color="textSecondary" variant="subtitle2">
-                                                    {note.author.function}
+                                                    Chef de département
                                                 </Typography>
                                             </ListItemText>
                                         </ListItem>
@@ -63,7 +61,7 @@ function NoteDetails() {
                                     <div style={{ marginLeft: '50px', marginRight: '20px', backgroundColor: "#fff"}}>
 
                                         <CardContent>
-                                            <Typography component="p">{note.content}</Typography>
+                                            <Typography component="p">Bonjour,Voici ci-joint une note concernant le rattrapage de compilation. Amicalement!</Typography>
                                         </CardContent>
                                         <CardContent>
                                             <Typography>Pieces jointes</Typography>
@@ -74,7 +72,7 @@ function NoteDetails() {
                                                     </ListItemAvatar>
                                                     <listItemText>
                                                         <Link component="button" color="primary"><a
-                                                            href={pdfFile}>{note.title}</a></Link>
+                                                            href={pdfFile}>Rattrapage de compilation</a></Link>
                                                     </listItemText>
                                                 </ListItem>
                                             </List>
@@ -86,15 +84,14 @@ function NoteDetails() {
                                             <ListSubheader component="div" style={{ marginLeft: '50px'}}>
                                                 Commentaires
                                             </ListSubheader>
-                                            {note.comments.map((comment) => (
+
                                                 <ListItem alignItems="flex-start" style={{marginLeft: '70px'}}>
                                                     <ListItemAvatar>
                                                         <AccountCircleSharpIcon color="disabled"
                                                                                 style={{fontSize: "50"}}/>
                                                     </ListItemAvatar>
-                                                    <ListItemText primary={comment.author} secondary={comment.comment}/>
+                                                    <ListItemText primary="Yasmine KONATE" secondary="Bien reçu! Merci"/>
                                                 </ListItem>
-                                            ))}
                                         </List>
                                         <div style={{ marginLeft: '50px', marginBottom: '30px'}}>
                                             <CommentForm/>
@@ -102,8 +99,6 @@ function NoteDetails() {
                                     </div>
                             </div>
                         </div>
-                    ))
-                }
             </Container>
     );
 }
