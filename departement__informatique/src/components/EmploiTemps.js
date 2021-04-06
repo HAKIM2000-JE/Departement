@@ -8,13 +8,13 @@ const EmploiTemps = (props) => {
 
     
     const afficherDocument =  (e) => {
-        axios.get('http://localhost:8081/document', {
+        axios.get('https://dept-info.herokuapp.com/document', {
             params: {
               promotion: promotion,
               document: "EMPLOI_DU_TEMPS",
             }
           }).then(res => {
-            console.log(res.data[0].titre);
+            //console.log(res.data[0].titre);
             //Parse if it a json object
             const noms = [];
             res.data.forEach((doc) => noms.push(doc.titre));
@@ -29,7 +29,7 @@ const EmploiTemps = (props) => {
         <div className="content">
             <div className="row">
                 <div className="col-10">
-                    <input type="button" className="submit" onClick={afficherDocument} value="Afficher"/>
+                    <label htmlFor="promotion">Promotion</label>
                 </div>
                 <div className="col-10">
                     <select id="promotion" name="promotion" onChange={
@@ -44,15 +44,17 @@ const EmploiTemps = (props) => {
                     </select>
                 </div>
                 <div className="col-10">
-                    <label htmlFor="promotion">Promotion</label>
+                    <input type="button" className="submit" onClick={afficherDocument} value="Afficher"/>
                 </div>
+                
+                
                 
                 
             </div>
             <div>
                 {
                     nomDocument && nomDocument.map((nom) => {
-                        return (<DocumentD  nomDocument={nom}  />)
+                        return (<DocumentD  key={Math.random().toString(36).substring(2)} nomDocument={nom}  />)
                     })
                 }
             </div>
